@@ -1,0 +1,14 @@
+{
+	"manifest_version": 2,
+
+    "name": "LNMTL Arrow Navigation",
+    "version": "1.0",
+    "description": "Allows use of left/right arrow keys to navigate between chapters",
+    "permissions": ["http://lnmtl.com/chapter/*"],
+    "content_scripts" : [
+    	{
+        	"matches" : ["*://lnmtl.com/chapter/*"],
+        	"js" : ["navigation.js"]
+    	}
+	]
+}

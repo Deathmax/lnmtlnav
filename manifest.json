@@ -4,7 +4,8 @@
     "name": "LNMTL Arrow Navigation",
     "version": "1.0",
     "description": "Allows use of left/right arrow keys to navigate between chapters",
-    "permissions": ["http://lnmtl.com/chapter/*"],
+    "permissions": ["http://lnmtl.com/chapter/*", "storage"],
+	"options_page": "options.html",
     "content_scripts" : [
     	{
         	"matches" : ["*://lnmtl.com/chapter/*"],

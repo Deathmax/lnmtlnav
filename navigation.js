@@ -15,9 +15,15 @@ document.addEventListener('keydown', function(event) {
 });
 
 window.onload = function() {
-    console.log("loading original text");
-    var eles = document.getElementsByClassName("original");
-    for (var i = 0; i < eles.length; i++) {
-        eles[i].style.display = "block";
-    }
+    chrome.storage.sync.get({
+        loadOriginal: true
+    }, function(items) {
+        if(!items.loadOriginal) 
+            return;
+        console.log("loading original text");
+        var eles = document.getElementsByClassName("original");
+        for (var i = 0; i < eles.length; i++) {
+            eles[i].style.display = "block";
+        }
+    });
 }
